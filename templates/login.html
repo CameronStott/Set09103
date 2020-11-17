@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+    <title>Login to Poodle</title>
+   <link rel= "stylesheet" type= "text/css" href="{{ url_for('static',filename='css/login.css') }}">
+
+</head>
+
+<body>
+    <h1>Login</h1>
+        <form action="/login" method="post" name="form">
+            {% if error %}
+                <p>{{error}}</p>
+            {% endif %}
+            <div class="login">
+                <div class="username">
+                    <label for="username">Username:</label>
+                    <input type="text" name="username" id="username"/>
+                </div>
+                <div class="password">
+                    <label for="password">Password:</label>
+                    <input type="text" name="password" id="password"/>
+                </div>
+                <div class="submit">
+                    <input type="submit" name="submit" id="submit"/>
+                </div>
+        </div>
+
+        </form>
+</body>
+</html>

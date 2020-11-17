@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Poodle Home</title>
+    <link rel= "stylesheet" type= "text/css" href="{{ url_for('static',filename='css/base.css') }}">
+
+</head>
+<body>
+    <div class="header">
+        <img src="{{ url_for('static', filename='images/poodle.jpeg' ) }}" alt="poodle" style="height:90px;width:90px;padding:5px;position:relative; float:left;">
+        <h1>Welcome to Poodle</h1>
+        <a href="/logout">Logout</a>
+        {% block admin %}{% endblock %}
+    </div>
+
+        <div class="left-nav">
+            <div class="pill-nav">
+                <a class="active" href="/home">Home</a>
+                <a href="/maths">Maths</a>
+                <a href="/english">English</a>
+                <a href="/science">Science</a>
+                <a href="/creative">Creative</a>
+                <a href="/social">Social</a>
+            </div>
+        </div>
+
+    {% block content %}{% endblock %}
+
+
+
+
+</body>
+</html>
