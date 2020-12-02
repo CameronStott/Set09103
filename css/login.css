@@ -1,0 +1,24 @@
+input[type=text]{
+    width: 75%;
+    align: center;
+}
+.username{
+    font-size: 18pt;
+    text-align: center;
+    padding: 12pt;
+}
+ .password{
+    font-size: 18pt;
+    text-align: center;
+    padding: 12pt;
+}
+h1{
+    text-align: center;
+}
+.login{
+    padding: 25px;
+    border: 5px outset blue;
+}
+.submit{
+    text-align: center;
+}
