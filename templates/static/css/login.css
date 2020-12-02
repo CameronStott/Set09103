@@ -1,0 +1,35 @@
+input{
+    width: 50%;
+    align: center;
+}
+.username{
+    font-size: 18pt;
+    text-align: center;
+    padding: 12pt;
+}
+ .password{
+    font-size: 18pt;
+    text-align: center;
+    padding: 12pt;
+}
+h1{
+    text-align: center;
+}
+.login{
+    width: 50%;
+    height: 200pt;
+    padding: 25pt;
+    border: 5px outset blue;
+    margin-left: 315pt;
+    margin-top: 80pt;
+}
+.submit{
+    text-align: center;
+    width: 100pt;
+    margin-left: 270pt;
+}
+
+.form_input{
+    text-align: center;
+    margin-top: 30pt;
+}
