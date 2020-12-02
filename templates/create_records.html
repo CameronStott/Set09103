@@ -4,9 +4,7 @@
     <h2>{{ title }}</h2>
     <p style="text-align: center; font-size: 14pt">Please use the input below to create pupils/teachers login details.</p>
         <form action="/create-user" method="post" name="form"  enctype="multipart/form-data">
-        {% if error %}
-            <p>{{error}}</p>
-        {% endif %}
+
         <div class="login">
             <div class="username">
                 <label for="username">Username:</label>
@@ -26,6 +24,9 @@
             <div class="submit">
                 <input type="submit" name="submit" id="submit"/>
             </div>
+            {% if error %}
+                <p style="text-align: center;">{{error}}</p>
+            {% endif %}
         </div>
         </form>
 {% endblock %}
