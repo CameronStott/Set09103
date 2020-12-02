@@ -1,5 +1,5 @@
-input[type=text]{
-    width: 75%;
+input{
+    width: 50%;
     align: center;
 }
 .username{
@@ -16,9 +16,20 @@ h1{
     text-align: center;
 }
 .login{
-    padding: 25px;
+    width: 50%;
+    height: 200pt;
+    padding: 25pt;
     border: 5px outset blue;
+    margin-left: 315pt;
+    margin-top: 80pt;
 }
 .submit{
     text-align: center;
+    width: 100pt;
+    margin-left: 270pt;
+}
+
+.form_input{
+    text-align: center;
+    margin-top: 30pt;
 }
