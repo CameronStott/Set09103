@@ -45,8 +45,11 @@ def valid_login(username, password):
     password = password.encode('utf-8')
     users = login_query_db('SELECT password FROM users WHERE username = ?', [username],
                            one=True)
-    for user in users:
-        user = user
+    if users is None:
+        return False
+    else:
+        for user in users:
+            user = user
 
     if bcrypt.checkpw(password, user):
         return True
@@ -130,8 +133,8 @@ def login():
     rows = return_all('SELECT * FROM announcements')
     if request.method == 'POST':
         if valid_login(request.form['username'], request.form['password']):
-            user = request.form['username']
-            session['user'] = user
+            use = request.form['username']
+            session['user'] = use
             if is_admin(request.form['username']):
                 return render_template('home.html', rows=rows)
             else:
