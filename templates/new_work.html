@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h2>{{ title }}</h2>
+        <form action="/create-work" method="post" name="form">
+        {% if error %}
+            <p>{{error}}</p>
+        {% endif %}
+        <div class="work">
+            <div class="subject">
+                <label for="subject">Subject:</label>
+                <select id="subject" name="subject">
+                    <option value="math">Maths</option>
+                    <option value="english">English</option>
+                    <option value="science">Science</option>
+                    <option value="creative">Creative</option>
+                </select>
+                <label for="desc">Description:</label>
+                <input type="text" name="desc" id="desc"/>
+             </div>
+            <div class="date">
+                <label for="date">Date of Release:</label>
+                <input type="date" id="date" name="date"/>
+            </div>
+            <div class="submit">
+                <input type="submit" name="submit" id="submit"/>
+            </div>
+        </div>
+        </form>
+
+    <h2>New Announcement</h2>
+        <form action="/create-announcement" method="post" name="form">
+            <div class="work">
+                <div class="date">
+                    <label for="an_date">Date of Release:</label>
+                    <input type="date" id="an_date" name="an_date"/>
+                </div>
+                <div class="ann">
+                    <label for="desc">Announcement:</label>
+                    <input type="text" name="announce" id="announce"/>
+                </div>
+
+                <div class="submit_ann">
+                    <input type="submit" name="submit" id="submit_ann"/>
+                </div>
+            </div>
+        </form>
+{% endblock %}
+
+
+        {% block right %}
+            <div class="right-nav">
+                <div class="pill-nav">
+                <a href="/create-user">Update Records</a>
+                <a href="/view-records">View Records</a>
+                <a href="/upload-work">New Work</a>
+                </div>
+            </div>
+        {% endblock %}

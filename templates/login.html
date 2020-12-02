@@ -9,20 +9,24 @@
 <body>
     <h1>Login</h1>
         <form action="/login" method="post" name="form">
-            {% if error %}
-                <p>{{error}}</p>
-            {% endif %}
+
             <div class="login">
-                <div class="username">
-                    <label for="username">Username:</label>
-                    <input type="text" name="username" id="username"/>
-                </div>
-                <div class="password">
-                    <label for="password">Password:</label>
-                    <input type="text" name="password" id="password"/>
-                </div>
-                <div class="submit">
-                    <input type="submit" name="submit" id="submit"/>
+                <div class="form_input">
+                    <div class="username">
+                        <label for="username">Username:</label>
+                        <input type="text" name="username" id="username"/>
+                    </div>
+                    <div class="password">
+                        <label for="password">Password:</label>
+                        <input type="password" name="password" id="password"/>
+                    </div>
+                    <div class="submit">
+                        <input type="submit" name="submit" id="submit"/>
+                    </div>
+
+                    {% if error %}
+                        <p style="text-align: center">{{error}}</p>
+                    {% endif %}
                 </div>
         </div>
 

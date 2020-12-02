@@ -1,22 +1,13 @@
 {% extends "base.html" %}
 
 
-{% block admin %}
-<a href="/admin">Admin</a>
-{% endblock %}
-
-{% block error %}
-    {% if error %}
-        <p>{{error}}</p>
-    {% endif %}
-{% endblock %}
-
 {% block content %}
+
 <h2>You will find work for {{ name }} below </h2>
 <table border="5">
     <thead>
-    <td>Subject</td>
-    <td>Description</td>
+    <td>User</td>
+    <td>Message</td>
     <td>Date</td>
 </thead>
 
@@ -33,5 +24,10 @@
     Thank you.
 </p>
 
+<form action="/chatroom" method="post" name="form">
+    <label>Message</label>
+    <input type="text" name="message" id="message"/>
+    <input type="submit" name="submit" id="submit"/>
+</form>
 
 {% endblock %}

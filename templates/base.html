@@ -10,25 +10,30 @@
     <div class="header">
         <img src="{{ url_for('static', filename='images/poodle.jpeg' ) }}" alt="poodle" style="height:90px;width:90px;padding:5px;position:relative; float:left;">
         <h1>Welcome to Poodle</h1>
-        <a href="/logout">Logout</a>
-        {% block admin %}{% endblock %}
+            <a href="/logout">Logout</a>
+            <a href="/admin">Admin</a>
+        {% block error %}{% endblock %}
     </div>
 
-        <div class="left-nav">
-            <div class="pill-nav">
-                <a class="active" href="/home">Home</a>
-                <a href="/maths">Maths</a>
-                <a href="/english">English</a>
-                <a href="/science">Science</a>
-                <a href="/creative">Creative</a>
-                <a href="/social">Social</a>
-            </div>
+    <div class="left-nav">
+        <div class="pill-nav">
+            <a class="active" href="/home">Home</a>
+            <a href="/maths">Maths</a>
+            <a href="/english">English</a>
+            <a href="/science">Science</a>
+            <a href="/creative">Creative</a>
+            <a href="/social">Social</a>
         </div>
+    </div>
 
-    {% block content %}{% endblock %}
+    <div class="announce">
+        {% block content %}{% endblock %}
+    </div>
 
-
-
+    {% block right %}{% endblock %}
+    <div class="chat">
+        <a href="/chatroom">CHAT</a>
+    </div>
 
 </body>
 </html>

@@ -1,13 +1,26 @@
 {% extends "base.html" %}
 
-{% if value %}
-    {% block admin %}
-    <a href="/admin">Admin</a>
-    {% endblock %}
-{% endif %}
-
-{% block content %}
-<div class="announce">
-    <h2>Announcements</h2>
-</div>
+{% block error %}
+    {% if error %}
+        <p style="text-align: right; padding: 5px">{{error}}</p>
+    {% endif %}
 {% endblock %}
+{% block content %}
+
+    <h2>Announcements</h2>
+
+<table border="5">
+    <thead>
+    <td>Date</td>
+    <td>Announcement</td>
+</thead>
+
+{% for row in rows %}
+    <tr>
+        <td>{{ row[0] }}</td>
+        <td>{{ row[1] }}</td>
+    </tr>
+{% endfor %}
+</table>
+{% endblock %}
+
