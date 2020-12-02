@@ -172,8 +172,19 @@ padding: 12pt;
     margin-bottom: 12pt;
 }
 .user{
-
     padding: 12pt;
+}
+
+.check{
+    font-size: 18pt;
+    text-align: center;
+    margin-bottom:12pt;
+}
+
+.submitbtn{
+    font-size: 18pt;
+    text-align: center;
+    margin-bottom:12pt;
 }
 .work{
     font-size: 12pt;
